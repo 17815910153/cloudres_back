@@ -9,7 +9,7 @@ import (
 type MemberDao struct {
 	*tool.Orm
 }
-
+//根据手机号和密码进行登录
 func (md *MemberDao) QueryByPhoneAndPwd(phone string, pwd string) *model.Member  {
 	var member model.Member
 	if _, err := md.Where("mobile = ? and password = ?", phone, pwd).Get(&member); err != nil{
@@ -25,6 +25,7 @@ func (md *MemberDao)ValidateSmsCode(phone string, code string) *model.SmsCode {
 		fmt.Println(err.Error())
 
 	}
+
 	return &sms
 
 }
