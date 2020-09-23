@@ -40,6 +40,7 @@ func registerRouter(router *gin.Engine) {
 	new (controller.HelloController).Router(router)
 	new (controller.MemberController).Router(router)
 	new (controller.FoodCategoryController).Router(router)
+	new (controller.ShopController).Router(router)
 }
 
 //跨域访问：cross  origin resource share

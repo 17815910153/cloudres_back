@@ -8,9 +8,10 @@ import (
 type FoodCategoryService struct {
 
 }
+//定义全局变量
+//var categoryDao = dao.FoodCategoryDao{tool.DbEngine}
 
-
-var foodCategoryDao = dao.NewFoodCategoryDao()
+//var foodCategoryDao = dao.NewFoodCategoryDao()
 func (service *FoodCategoryService) GetAllCategory() ([]model.FoodCategory, error)  {
 	foodCategoryDao := dao.NewFoodCategoryDao()
 	categories, err := foodCategoryDao.QueryAllCategory()
