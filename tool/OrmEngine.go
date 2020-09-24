@@ -26,7 +26,15 @@ func OrmEngine(cfg *Config) (*Orm, error) {
 	}
 	engine.ShowSQL(database.ShowSql)
 	//进行数据库表同步 TODO
-	err = engine.Sync2(new(model.SmsCode), new(model.Member), new(model.FoodCategory), new(model.Shop))
+	err = engine.Sync2(
+		new(model.SmsCode),
+		new(model.Member),
+		new(model.FoodCategory),
+		new(model.Shop),
+		new(model.ShopService),
+		new(model.Service),
+		new(model.Goods),
+		)
 
 
 	if err != nil {
@@ -39,7 +47,7 @@ func OrmEngine(cfg *Config) (*Orm, error) {
 
 	//插入初始化shop数据
 	InitShopData()
-
+	InitGoodsData()
 
 	return orm, nil
 
@@ -91,3 +99,39 @@ func InitShopData() {
 		fmt.Println(err.Error())
 	}
 }
+/**
+ * 初始化goods表格，保存测试数据
+ */
+func InitGoodsData() {
+	goods := []model.Goods{
+		model.Goods{Id: 1, Name: "小小鲜肉包", Description: "滑蛋牛肉粥(1份)+小小鲜肉包(4只)", SellCount: 14, Price: 25, OldPrice: 29, ShopId: 1},
+		model.Goods{Id: 2, Name: "滑蛋牛肉粥+小小鲜肉包", Description: "滑蛋牛肉粥(1份)+小小鲜肉包(3只)", SellCount: 6, Price: 35, OldPrice: 41, ShopId: 1},
+		model.Goods{Id: 3, Name: "滑蛋牛肉粥+绿甘蓝馅饼", Description: "滑蛋牛肉粥(1份)+绿甘蓝馅饼(1张)", SellCount: 2, Price: 25, OldPrice: 30, ShopId: 1},
+		model.Goods{Id: 4, Name: "茶香卤味蛋", Description: "咸鸡蛋", SellCount: 688, Price: 2.5, OldPrice: 3, ShopId: 1},
+		model.Goods{Id: 5, Name: "韭菜鸡蛋馅饼(2张)", Description: "韭菜鸡蛋馅饼", SellCount: 381, Price: 10, OldPrice: 12, ShopId: 1},
+		model.Goods{Id: 6, Name: "小小鲜肉包+豆浆套餐", Description: "小小鲜肉包(8只)装+豆浆(1杯)", SellCount: 335, Price: 9.9, OldPrice: 11.9, ShopId: 479},
+		model.Goods{Id: 7, Name: "翠香炒素饼", Description: "咸鲜翠香素炒饼", SellCount: 260, Price: 17.9, OldPrice: 20.9, ShopId: 485},
+		model.Goods{Id: 8, Name: "香煎鲜肉包", Description: "咸鲜猪肉鲜肉包", SellCount: 173, Price: 10.9, OldPrice: 12.9, ShopId: 486}}
+
+	//事务
+	session := DbEngine.NewSession()
+	defer session.Close()
+	//事务操作：事务开始, 执行操作（回滚），提交事务
+	err := session.Begin()
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+	for _, shop := range goods {
+		_, err = session.Insert(&shop)
+		if err != nil {
+			session.Rollback()
+			return
+		}
+	}
+	err = session.Commit() //提交事务
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+}
+

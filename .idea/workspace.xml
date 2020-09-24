@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="412e187f-29ae-4487-95e2-00e8282d722b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controller/ShopController.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/ShopDao.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/shop.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/ShopService.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VO/ShopInfoVO.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/GoodsController.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dao/GoodsDao.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dao/ServiceDao.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dao/ShopServiceDao.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/Goods.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/Service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/ServiceShop.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/GoodsService.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ShopController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ShopController.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/ShopDao.go" beforeDir="false" afterPath="$PROJECT_DIR$/dao/ShopDao.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/FoodCategoryService.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/FoodCategoryService.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/shop.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/shop.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/ShopService.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/ShopService.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tool/OrmEngine.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool/OrmEngine.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,10 +61,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lesson19" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dao" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WorkSpace\Go_WorkSpace\GoCode\src\CloudRes\dao" />
       <recent name="D:\WorkSpace\Go_WorkSpace\GoCode\src\CloudRes\tool" />
       <recent name="D:\WorkSpace\Go_WorkSpace\GoCode\src\CloudRes\model" />
     </key>
@@ -85,41 +98,41 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1220" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600742156379" />
-    <state width="1220" height="177" key="GridCell.Tab.0.bottom" timestamp="1600858664315">
+    <state width="1879" height="186" key="GridCell.Tab.0.bottom" timestamp="1600948279850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1220" height="177" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600858664315" />
-    <state width="1220" height="177" key="GridCell.Tab.0.center" timestamp="1600858664315">
+    <state width="1879" height="186" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600948279850" />
+    <state width="1879" height="186" key="GridCell.Tab.0.center" timestamp="1600948279850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1220" height="177" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600858664315" />
-    <state width="1220" height="177" key="GridCell.Tab.0.left" timestamp="1600858664315">
+    <state width="1879" height="186" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600948279850" />
+    <state width="1879" height="186" key="GridCell.Tab.0.left" timestamp="1600948279850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1220" height="177" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600858664315" />
-    <state width="1220" height="177" key="GridCell.Tab.0.right" timestamp="1600858664315">
+    <state width="1879" height="186" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600948279850" />
+    <state width="1879" height="186" key="GridCell.Tab.0.right" timestamp="1600948279850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1220" height="177" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600858664315" />
-    <state width="1879" height="339" key="GridCell.Tab.1.bottom" timestamp="1600826159819">
+    <state width="1879" height="186" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600948279850" />
+    <state width="1241" height="338" key="GridCell.Tab.1.bottom" timestamp="1600938007412">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1879" height="339" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600826159819" />
-    <state width="1879" height="339" key="GridCell.Tab.1.center" timestamp="1600826159819">
+    <state width="1241" height="338" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600938007412" />
+    <state width="1241" height="338" key="GridCell.Tab.1.center" timestamp="1600938007412">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1879" height="339" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600826159819" />
-    <state width="1879" height="339" key="GridCell.Tab.1.left" timestamp="1600826159819">
+    <state width="1241" height="338" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600938007412" />
+    <state width="1241" height="338" key="GridCell.Tab.1.left" timestamp="1600938007412">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1879" height="339" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600826159819" />
-    <state width="1879" height="339" key="GridCell.Tab.1.right" timestamp="1600826159819">
+    <state width="1241" height="338" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600938007412" />
+    <state width="1241" height="338" key="GridCell.Tab.1.right" timestamp="1600938007412">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1879" height="339" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600826159819" />
-    <state x="1103" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1600851603104">
+    <state width="1241" height="338" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600938007412" />
+    <state x="1103" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1600947947458">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1103" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600851603104" />
+    <state x="1103" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600947947458" />
   </component>
 </project>

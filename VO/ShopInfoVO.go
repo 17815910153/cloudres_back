@@ -1,9 +1,11 @@
-package model
+package VO
+
+import "CloudRes/model"
 
 /**
- * 商家结构体/商户
+ * 商户信息VO，前端接受
  */
-type Shop struct {
+type ShopInfoVO struct {
 	//id
 	Id int64 `xorm:"pk autoincr" json:"id"`
 	//商铺名称
@@ -45,5 +47,5 @@ type Shop struct {
 	OpeningHours string `xorm:"varchar(20)" json:"opening_hours"`
 
 	// 保障服务
-	Service []Service `xorm:""`
+	Supports []model.Service `xorm:""`
 }
