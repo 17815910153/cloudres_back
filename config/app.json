@@ -6,8 +6,8 @@
   "sms": {
     "sign_name": "gdpuxjl",
     "template_code": "SMS_202816501",
-    "app_key": "LTAI4Fnupk1mfREe1FCV16xU",
-    "app_secret": "m0ebkS6hiZOWf9gFAcqa5xBjhc5mDZ",
+    "app_key": "your app_key",
+    "app_secret": "your app_secret",
     "region_id": "cn-hangzhou"
   },
   "database": {
